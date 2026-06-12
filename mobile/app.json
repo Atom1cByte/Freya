@@ -1,0 +1,96 @@
+{
+  "expo": {
+    "name": "Freya",
+    "slug": "freya",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "freya",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.freya.app",
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "Freya reads and updates your calendar to brief you and reschedule events.",
+        "NSCalendarsFullAccessUsageDescription": "Freya reads and updates your calendar to brief you and reschedule events.",
+        "NSRemindersUsageDescription": "Freya creates reminders for travel time and follow-ups.",
+        "NSRemindersFullAccessUsageDescription": "Freya creates reminders for travel time and follow-ups.",
+        "NSContactsUsageDescription": "Freya can look up contacts when drafting messages.",
+        "LSApplicationQueriesSchemes": [
+          "shortcuts",
+          "sms",
+          "tel",
+          "mailto",
+          "maps",
+          "calshow",
+          "message",
+          "shortcuts",
+          "sms",
+          "tel",
+          "mailto",
+          "maps",
+          "calshow",
+          "message"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-dev-client",
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Freya reads and updates your calendar.",
+          "remindersPermission": "Freya creates reminders for travel and follow-ups."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Freya looks up contacts when drafting messages."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#FF9500"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#000000"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "openaiApiKey": "",
+      "router": {},
+      "eas": {
+        "projectId": "84ddb504-0eae-4506-afbb-ecff77a15bce"
+      }
+    },
+    "owner": "atomicb"
+  }
+}
